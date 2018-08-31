@@ -1,8 +1,8 @@
 <?php get_header() ?>
 	<?php the_post() ?>
 	
-	<?php if ( is_active_sidebar( 'contact_widget' ) ) : ?>
-		<?php dynamic_sidebar( 'contact_widget' ); ?>            
+	<?php if ( is_active_sidebar( 'contact-widget' ) ) : ?>
+		<?php dynamic_sidebar( 'contact-widget' ); ?>            
 	<?php endif; ?>
 
 	<div class="container py-3">
