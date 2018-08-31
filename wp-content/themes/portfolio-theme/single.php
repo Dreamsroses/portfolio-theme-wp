@@ -4,15 +4,20 @@
 	<?php while ( have_posts() ) { ?>
 		<?php the_post(); ?>
 
-		<?php the_post_thumbnail() ?>
-		<?php the_title() ?>
-		<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>
-		<?php the_content() ?>
+		<div class="col-md-12">
+			<?php the_post_thumbnail() ?>
+			<div class="card-body">
+				<h5 class="card-title"><?php the_title() ?></h5>
+				<p class="card-text"><?php the_excerpt() ?></p>
+			</div>
+		</div>
 
 	<?php } ?>
 <?php } else { ?>
-	<!-- Content -->
+
 <?php } wp_reset_query(); ?>
 
 <?php get_sidebar() ?>
 <?php get_footer() ?>
+
+

@@ -4,7 +4,7 @@
 	<?php if ( is_active_sidebar( 'contact_widget' ) ) : ?>
 		<?php dynamic_sidebar( 'contact_widget' ); ?>            
 	<?php endif; ?>
-	
+
 <!-- Fotografia -->
 <div class="container py-3">
   <div class="row">
@@ -15,33 +15,31 @@
 </div>
 
 <div class="card-deck">
-  <div class="card">
-	<img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/futura_mama/IMG_4902.jpg" alt="logo blas diseño">
-    <div class="card-body">
-      <h5 class="card-title">Futura Mamá</h5>
-      <p class="card-text">Sesión fotografica de futura mamá.</p>
-    </div>
-  </div>
 
-  <div class="card">
-    <img class="card-img-top" src="" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+	<?php
+		$arg = array(
+			'post_type'		 => 'fotografia',
+			'posts_per_page' => 3,
+			'paged'			 => $paged
+		);
 
-  <div class="card">
-    <img class="card-img-top" src="" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+		$get_arg = new WP_Query( $arg );
+
+		while ( $get_arg->have_posts() ) {
+			$get_arg->the_post();
+		?>
+
+		<div class="card">
+			<?php the_post_thumbnail(array('class' => 'img-responsive')) ?>
+			<div class="card-body">
+				<h5 class="card-title"><?php the_title() ?></h5>
+				<p class="card-text"><?php the_excerpt() ?></p>
+			</div>
+		</div>
+
+		<?php } wp_reset_postdata();
+	?>
 </div>
 <!-- /Fotografia -->
-
 
 <?php get_footer() ?>

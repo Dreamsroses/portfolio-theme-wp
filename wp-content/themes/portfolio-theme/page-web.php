@@ -8,36 +8,36 @@
 <!-- Desarollo Web -->
 <div class="container py-3">
   <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-12">
 		<h1 class="titular__servicios my-5 p-1 mb-2">Desarrollo Web</h1>
  	 </div>
   </div>
 </div>
 
 <div class="card-deck">
-  <div class="card">
-	<img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/publicrom_web/Publicrom-Responsive-mockup.jpg" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Mockup de website Publicrom</h5>
-      <p class="card-text">Diseño preliminar de sitio web, empresa dedicada a la distibución y venta de albumes y laminas.</p>
-    </div>
-  </div>
+	<?php
+		$arg = array(
+			'post_type'		 => 'web',
+			'posts_per_page' => 3,
+			'paged'			 => $paged
+		);
 
-  <div class="card">
-    <img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/hiway_venture_web/Hiway-Ventures-v1.6.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">One page de Hiway Venture</h5>
-      <p class="card-text">Web site de Hiway ventures dedicada al apoyo financiero de pequeñas empresas.</p>
-    </div>
-  </div>
+		$get_arg = new WP_Query( $arg );
 
-  <div class="card">
-    <img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/newrain_mockup/Newrain Mockup_Home.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text">.</p>
-    </div>
-  </div>
+		while ( $get_arg->have_posts() ) {
+			$get_arg->the_post();
+		?>
+
+		<div class="card">
+			<?php the_post_thumbnail() ?>
+			<div class="card-body">
+				<h5 class="card-title"><?php the_title() ?></h5>
+				<p class="card-text"><?php the_excerpt() ?></p>
+			</div>
+		</div>
+
+		<?php } wp_reset_postdata();
+	?>
 </div>
 <!-- /Desarrollo Web -->
 

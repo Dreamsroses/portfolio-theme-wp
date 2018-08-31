@@ -15,29 +15,32 @@
 </div>
 
 <div class="card-deck">
-  <div class="card">
-	<img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/blas_diseño.jpg" alt="logo blas diseño">
-    <div class="card-body">
-      <h5 class="card-title">Logo Blas Diseño</h5>
-      <p class="card-text">Diseño de logo Blas diseño, empresa dedicada a arquitectura y topografía.</p>
-    </div>
-  </div>
 
-  <div class="card">
-    <img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/elefante_frontal_v3.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">The Elephant Coffee</h5>
-      <p class="card-text">Empresa dedicada a la venta de café.</p>
-    </div>
-  </div>
+	<?php
+		$arg = array(
+			'post_type'		 => 'marca',
+			'posts_per_page' => 3,
+			'paged'			 => $paged
+		);
 
-  <div class="card">
-    <img class="card-img-top" src="<?php bloginfo('template_url') ?>/assets/images/tarjeta_ca.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Tarjeta de presentación</h5>
-      <p class="card-text">Tarjeta de presentación de Carlos Augusto, Investigador Paranormal.</p>
-    </div>
-  </div>
+
+		$get_arg = new WP_Query( $arg );
+
+		while ( $get_arg->have_posts() ) {
+			$get_arg->the_post();
+		?>
+			
+		<div class="card">
+			<?php the_post_thumbnail() ?>
+			<div class="card-body">
+				<h5 class="card-title"><?php the_title() ?></h5>
+				<p class="card-text"><?php the_excerpt() ?></p>
+			</div>
+		</div>
+
+
+		<?php } wp_reset_postdata();
+	?>
 </div>
 <!-- /Diseños de Marca -->
 
