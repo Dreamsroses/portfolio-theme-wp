@@ -7,7 +7,7 @@
 		<h1 class="titular__nosotros my-5 p-1 mb-2">Sobre Nosotros</h1>
 		<h4 class="subtitulo__nosotros">"Desarrollamos soluciones en base a su modelo de negocio, asesoramos, investigamos y diseñamos.
 		Nos involucramos con su marca desde el perfil del negocio, asesoramos desde su perspectiva, a través de investigaciones de mercado para finalmente desarrollar la soluciones gráficas a la medida."</h4>
-		<a href="/nosotros" class="btn btn-outline-warning btn-lg">Ver más</a>   
+		<a href="<?php bloginfo('url') ?>/nosotros" class="btn btn-outline-warning btn-lg">Ver más</a>   
 	</div>
  </div>
 </div>
@@ -30,7 +30,7 @@
       <p class="card-text">Servicio de fotografía enfocado a la imagen empresarial o simplemente para la creación de albúm de fotos familiares.</p>
     </div>
     <div class="card-footer">
-      <a href="/fotografia" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
+      <a href="<?php bloginfo('url') ?>/fotografia" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
     </div>
   </div>
   <div class="card">
@@ -40,7 +40,7 @@
       <p class="card-text">Todo lo realacionado a su marca, ya sea para un producto o servicio que se comercialice. Entregamos diseño basado en los resultados de  asesoría e investigación.</p>
     </div>
     <div class="card-footer">
-     <a href="/marca" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
+     <a href="<?php bloginfo('url') ?>/marca" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
     </div>
   </div>
   <div class="card">
@@ -50,7 +50,7 @@
       <p class="card-text">Damos asesoría integral en el desarrollo de su sitio web, pasando por las capas de confección, habilitación en web server y administración.</p>
     </div>
     <div class="card-footer">
-    <a href="/web" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
+    <a href="<?php bloginfo('url') ?>/web" class="btn btn-outline-warning btn-lg"><small class="text-muted">Ver más</small></a>
     </div>
   </div>
 </div>
