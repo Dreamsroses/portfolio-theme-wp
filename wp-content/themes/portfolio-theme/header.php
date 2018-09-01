@@ -11,7 +11,7 @@
 
 	<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="/">
+	<a class="navbar-brand" href="<?php bloginfo('url') ?>/">
     <img src="<?php bloginfo('template_url') ?>/assets/images/logo-Effect-Shot.png" class="logo__navbar d-inline-block align-top" alt="logo"></a>
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,23 +19,23 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
+        <a class="nav-link" href="<?php bloginfo('url') ?>/">Home<span class="sr-only"></span></a>
       </li>
 
 		  <li class="nav-item dropdown">
-        <a class="nav-link" href="/portafolio" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portafolio</a>
+        <a class="nav-link" href="<?php bloginfo('url') ?>/portafolio" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portafolio</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/fotografia">Fotografia</a>
-          <a class="dropdown-item" href="/marca">Marca</a>
-          <a class="dropdown-item" href="/web">Desarrollo Web</a>
+          <a class="dropdown-item" href="<?php bloginfo('url') ?>/fotografia">Fotografia</a>
+          <a class="dropdown-item" href="<?php bloginfo('url') ?>/marca">Marca</a>
+          <a class="dropdown-item" href="<?php bloginfo('url') ?>/web">Desarrollo Web</a>
         </div>
        </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/nosotros">Sobre Nosotros</a>
+        <a class="nav-link" href="<?php bloginfo('url') ?>/nosotros">Sobre Nosotros</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contacto">Contacto</a>
+        <a class="nav-link" href="<?php bloginfo('url') ?>/contacto">Contacto</a>
       </li>      
     </ul>
   </div>
