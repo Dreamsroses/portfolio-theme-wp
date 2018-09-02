@@ -5,7 +5,7 @@
 		<?php the_post(); ?>
 
 		<div class="col-md-12">
-			<?php the_post_thumbnail('grande', array('class' => 'img-responsive')) ?>
+			<?php the_post_thumbnail('full', array('class' => 'img-responsive')) ?>
 			<div class="card-body">
 				<h5 class="card-title"><?php the_title() ?></h5>
 				<p class="card-text"><?php the_excerpt() ?></p>

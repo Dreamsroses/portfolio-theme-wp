@@ -13,7 +13,8 @@ function dl_image_sizes( $sizes ) {
 
 	$add_sizes = array(
 		'mediana'		=> __( 'Tamaño del slideshow' ),
-		'grande'	=> __( 'Tamaño personalizado del logo' )
+		'grande'	=> __( 'Tamaño grande' ),
+		'full'	=> __( 'Tamaño personalizado del logo' )
 	);
 
 	return array_merge( $sizes, $add_sizes );
@@ -33,7 +34,9 @@ function dl_image_sizes( $sizes ) {
 if ( function_exists( 'add_theme_support' ) ) {
 
 	add_image_size( 'mediana', 200, 200, true );			// Personalización del tamaño del slideshow
-	add_image_size( 'grande', 1200, 800, true );		// Personalización del tamaño del logo
+	add_image_size( 'grande', 768, 1024, true );		// Personalización de tamaño grande
+	add_image_size( 'full', 1200, 800, true );		// Personalización del tamaño del logo
+
 
 	add_filter( 'image_size_names_choose', 'dl_image_sizes' );
 
