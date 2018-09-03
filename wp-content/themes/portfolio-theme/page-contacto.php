@@ -1,10 +1,6 @@
 <?php get_header() ?>
 	<?php the_post() ?>
 	
-	<?php if ( is_active_sidebar( 'contact-widget' ) ) : ?>
-		<?php dynamic_sidebar( 'contact-widget' ); ?>            
-	<?php endif; ?>
-
 	<div class="container py-3">
   <div class="row">
   <div class="col-md-12">
@@ -16,16 +12,9 @@
 <div class="container">
   <div class="row">
 	  <div class="col-md-6">
-	    <form action="mailer.php" id="form">
-      	<label for="email">Email:</label>
-      	<input type="text" name="email" id="email" placeholder="email@example.com"><br>
-      	<label for="subject">Asunto:</label>
-      	<input type="text" name="subject" id="subject" placeholder="subject"><br>
-      	<label for="message">Mensaje:</label>
-      	<textarea name="message" id="message" placeholder="message"></textarea><br>
-      	<button name="submit" id="submit">Enviar</button>
-      	<label id="info"></label>
-    	</form>
+      <?php if ( is_active_sidebar( 'contact-widget' ) ) : ?>
+      <?php dynamic_sidebar( 'contact-widget' ); ?>            
+      <?php endif; ?>
     </div>
 
 <div class="col-md-6">
