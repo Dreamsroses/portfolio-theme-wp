@@ -1,40 +1,30 @@
 # Wordpress Boilerplate
 
-## Introducción
-Esta es una plantilla básica, que tiene como objetivo ayudar a la gente que comienza recién a crear plantillas para Wordpress. Incorpora algunas de las últimas tecnologías implementadas por el equipo de Wordpress y también otras que le entregarán a los desarrolladores una base mínima para crear exitosamente un Theme.
-
-### Uso de Paginación
-En la versión 1.1 se ha agregado la posibilidad de agregar paginación, para esos casos donde se desea mostrar más de los 10 posts que muestra por defecto Wordpress.
-
-Para utilizar la paginación debemos llamar a la función `the_pagination()`. Y en el caso de utilizar la paginación en un Custom Post Type, deberemos entregar como parámetro el resultado de la búsqueda, así como se especifica en el siguiente código.
-
-~~~html
-<?php
-	$arg = array(
-		'post_type'		 => 'custom_post_name',
-		'paged'			 => $paged
-	);
-	
-	$get_arg = new WP_Query( $arg );
-	
-	while ( $get_arg->have_posts() ) {
-		$get_arg->the_post();
-	?>
-		
-		<!-- Aquí agregar contenido a mostrar por el loop -->
-	
-	<?php } 
-?>
-
-<?php the_pagination( $get_arg ); ?>
+###### Se utiliza boilerplate para la ejecución del proyecto Final.
 
 
-~~~
+Proyecto Final Desafio Latam Rosa Morales Rojas
 
-Además es importante que dentro de los parámetros de búsqueda sea incorporado el key `paged` junto con el valor `$paged`, para que nuestra paginación pueda funcionar correctamente.
+Inicio: 17 de Agosto 2018 
 
-### Uso de Flickity
-En la versión 1.3.0 se ha agregado [Flickity](https://github.com/metafizzy/flickity/) como opción a Flexslider. Un versátil plugin de Javascript que contiene menos errores que el anterior, se encuentra más actualizado y además con más opciones de visualización. Para obtener información de cómo implementar Flickity, por favor revisar la [documentación](https://flickity.metafizzy.co) correspondiente.
+# Problemática 
+###### Effect Shot Design es una empresa de diseño gráfico que existe desde el año 2015, su grupo objetivo desde entonces son emprendedores y grupo cercano de amigos/conocidos, actualmente cuenta con un sitio web (http://www.effect-shot.cl/), el cual no refleja el profesionalismo y la calidad que puede ofrecer, de esta forma no puede captar nuevos clientes.
+###### El actual sitio web esta sobre la plataforma Wordpress con una plantilla grautita, lo que no permite personalización y esto a su vez mostrar los conocimientos ya adquiridos en el ambito del desarrollo web.
 
-### Archivo de opciones
-En la versión 1.4.3 se creó la variable `$theme_options` que contendrá todas las configuraciones necesarias para el theme. Dentro de los parámetros que contiene se encuentran opciones para saber si WooCommerce esta activo, obtener accesos a las carpetas de funciones y el key slider contiene dos nuevos parámetros. Estos permiten a través de un valor booleano activar o desactivar cada uno de los sliders disponibles en la plantilla.
+# Solución
+###### Se presenta una solución grafica minimalista del sitio web, administrada a traves de wordpress, el objetivo es facilitar la adminsitración de los post por concepto de trabajos realizados y mostrarse a los clientes con una imagen más seria y profesional.
+
+# Pauta de este proyecto
+##### Para abordar el proyecto se realizan las siguientes actividades:
+###### Paso 1: se confecciona codigo en html y css.
+###### Paso 2: se testea que los stylesheet de bootstrap, google fonts, fontawesome y el estilo propio funcione correctamente.
+###### Paso 3: Se pasa a wordpress de forma local a traves de mamp en localhost:8888
+###### Paso 4: Comienza el paso de html a php para el uso en wordpress.
+###### Paso 5: comienza la etapa de deploy del local al servidor abastecido por Desafio Latam, en esta etapa se procede con la carga de la base de dato y subir el theme confeccionado.
+###### Paso 6: Se confecciona los custom post type para la administración del portafolio de ESD, se instala plugins de seguridad y formulario de contacto, Wordfence Security y Contact Form 7 respectivamente.
+###### Paso 7: Finalmente se realizan las pruebas de funcionalidad desde moviles y pc para el uso en modo responsive.
+
+
+##### Acceso a wp
+
+#### Los accesos se encuentran disponible en el repositorio por nombre "Proyecto_final",el cual ya se encuentra disponible en la plataforma de Desafio Latam.
