@@ -2978,12 +2978,30 @@ ul.page-nav {
   line-height: 50px;
   text-align: justify;
 }
+.titular__portafolio{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+}
+.subtitulo__portafolio{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: justify;
+}
 .titular__servicios{
   font-family: 'Work Sans', sans-serif;
   font-weight: 900;
 }
 .titular__contactanos{
  text-align: center;
+}
+.subtitulo__contactanos{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
 }
 .titular__siguenos{
   text-align: center;

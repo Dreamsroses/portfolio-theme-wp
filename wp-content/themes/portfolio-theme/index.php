@@ -56,6 +56,18 @@
 </div>
 <!-- /Nuestros Servicios -->
 
+<!-- Contacto -->
+<div class="container py-5">
+  <div class="row">
+  <div class="col-md-12">
+    <h1 class="titular__contactanos my-5 p-1 mb-2">Contáctenos</h1>
+    <h3 class="subtitulo__contactanos">Te invitamos a consultar por nuestros servicios.</h3>
+    <a href="<?php bloginfo('url') ?>/contacto" class="btn btn-outline-warning btn-lg btn-block">Ver más</a>   
+  </div>
+ </div>
+</div>
+<!-- /Contacto -->
+
 <?php get_sidebar() ?>
 
 <?php get_footer() ?>
