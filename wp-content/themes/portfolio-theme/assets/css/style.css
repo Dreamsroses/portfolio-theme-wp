@@ -2713,12 +2713,28 @@ label {
   display: block;
 }
 input, textarea {
-  height: 100px;
-  width: 500px;
+  height: 60px;
+  width: 300px;
   margin: 5px 0;
   border: 2px solid #CCC;
 }
 @media only screen and (max-width: 700px){
 input, textarea {
         width: 100%;
+}
+
+/* Sección Maps */
+
+.map-responsive{
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

@@ -24,6 +24,10 @@
 </div>
 <!-- /Footer -->
 
+<div class="col-md-12 bg-secondary text-light">
+  <p class="p-3">By Effect Shot Design © Copyright 2018</p>
+</div>
+
 <?php wp_footer() ?>
 </body>
 </html>
